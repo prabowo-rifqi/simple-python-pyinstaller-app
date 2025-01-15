@@ -9,11 +9,15 @@ node {
         // Stage Test
         stage('Test') {
             try {
-                // Install pytest before running tests
-                sh 'pip install pytest'
+                // Install virtualenv and create a new environment
+                sh 'pip install virtualenv'
+                sh 'virtualenv venv'
+
+                // Activate the virtual environment and install pytest
+                sh 'source venv/bin/activate && pip install pytest'
 
                 // Run the tests with pytest
-                sh 'pytest --junit-xml test-reports/results.xml sources/test_calc.py'
+                sh 'source venv/bin/activate && pytest --junit-xml test-reports/results.xml sources/test_calc.py'
             } catch (Exception e) {
                 currentBuild.result = 'FAILURE'
                 throw e
