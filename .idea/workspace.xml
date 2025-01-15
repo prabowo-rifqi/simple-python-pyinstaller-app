@@ -25,7 +25,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rifqi/project/python/Dockerfile",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rifqi/project/a428-cicd-labs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,7 +57,7 @@
       <workItem from="1736928676068" duration="631000" />
       <workItem from="1736936678726" duration="130000" />
       <workItem from="1736936811454" duration="106000" />
-      <workItem from="1736936945181" duration="2662000" />
+      <workItem from="1736936945181" duration="4805000" />
     </task>
     <task id="LOCAL-00001" summary="Move Jenkinsfile">
       <option name="closed" value="true" />
@@ -147,7 +147,47 @@
       <option name="project" value="LOCAL" />
       <updated>1736939310416</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1736939659654</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736939659654</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1736939955383</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736939955383</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1736940015322</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736940015322</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1736943161920</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1736943161920</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1736943279901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1736943279901</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
