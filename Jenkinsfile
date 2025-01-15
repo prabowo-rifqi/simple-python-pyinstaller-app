@@ -9,7 +9,11 @@ node {
         // Stage Test
         stage('Test') {
             try {
-                sh 'py.test --junit-xml test-reports/results.xml sources/test_calc.py'
+                // Install pytest before running tests
+                sh 'pip install pytest'
+
+                // Run the tests with pytest
+                sh 'pytest --junit-xml test-reports/results.xml sources/test_calc.py'
             } catch (Exception e) {
                 currentBuild.result = 'FAILURE'
                 throw e
