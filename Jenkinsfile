@@ -28,11 +28,15 @@ node {
 
     // Stage 'Deliver'
     stage('Deliver') {
-        docker.image('cdrx/pyinstaller-linux:python2').inside('--entrypoint="" -v ${WORKSPACE}:/workspace') {
+        docker.image('cdrx/pyinstaller-linux:python2').inside('--entrypoint=""') {
             sh '''
-                cd /workspace
+                # Verify PyInstaller is installed
+                which pyinstaller
+
+                # Create executable
+                cd ${WORKSPACE}
                 mkdir -p dist
-                python -m pyinstaller --onefile sources/add2vals.py
+                PyInstaller --onefile sources/add2vals.py
             '''
 
             if (fileExists('dist/add2vals')) {
