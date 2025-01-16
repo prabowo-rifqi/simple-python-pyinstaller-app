@@ -30,19 +30,23 @@ node {
     stage('Deliver') {
         docker.image('cdrx/pyinstaller-linux:python2').inside('--entrypoint=""') {
             sh '''
-                # Verify PyInstaller is installed
+                # Verifikasi PyInstaller terinstal
                 which pyinstaller
+                if [ $? -ne 0 ]; then
+                    echo "PyInstaller not found!"
+                    exit 1
+                fi
 
-                # Create executable
+                # Membuat executable
                 cd ${WORKSPACE}
                 mkdir -p dist
                 PyInstaller --onefile sources/add2vals.py
             '''
-
+            // Mengecek apakah executable berhasil dibuat
             if (fileExists('dist/add2vals')) {
                 archiveArtifacts artifacts: 'dist/add2vals', fingerprint: true
             } else {
-                error 'PyInstaller failed to create the executable'
+                error 'PyInstaller gagal membuat executable'
             }
         }
     }
