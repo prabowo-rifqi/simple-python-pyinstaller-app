@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update Jenkinsfile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jenkins/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Add Deploy Stage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +73,7 @@
       <workItem from="1736944122064" duration="1740000" />
       <workItem from="1736948445864" duration="3045000" />
       <workItem from="1737034687682" duration="135000" />
-      <workItem from="1737043601392" duration="446000" />
+      <workItem from="1737043601392" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="Move Jenkinsfile">
       <option name="closed" value="true" />
@@ -215,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736944124668</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737044076561</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1737044076561</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737044361644</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1737044361644</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +239,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Move Jenkinsfile" />
     <MESSAGE value="Update Jenkinsfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Jenkinsfile" />
+    <MESSAGE value="Add Deploy Stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Deploy Stage" />
   </component>
 </project>
