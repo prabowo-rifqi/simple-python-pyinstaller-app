@@ -13,6 +13,7 @@ node {
         // Stage 'Test'
         stage('Test') {
             try {
+                sh 'pip install pytest'
                 // Menjalankan pytest dan menyimpan hasilnya dalam format XML
                 sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py > log.txt 2>&1'
             } finally {
