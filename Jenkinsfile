@@ -1,5 +1,5 @@
 node {
-    docker.image('python:-alpine').inside {
+    docker.image('python:3.9-alpine').inside {
         // Stage 'Build'
         stage('Build') {
             try {
@@ -10,12 +10,15 @@ node {
                 archiveArtifacts artifacts: 'log.txt', allowEmptyArchive: true
             }
         }
+
         // Stage 'Test'
         stage('Test') {
             try {
+                // Menginstal pytest
                 sh 'pip install pytest'
+
                 // Menjalankan pytest dan menyimpan hasilnya dalam format XML
-                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py > log.txt 2>&1'
+                sh 'pytest --verbose --junit-xml=test-reports/results.xml sources/test_calc.py > log.txt 2>&1'
             } finally {
                 // Mengarsipkan file log dan hasil test
                 archiveArtifacts artifacts: 'log.txt', allowEmptyArchive: true
