@@ -31,7 +31,7 @@ node {
         docker.image('cdrx/pyinstaller-linux:python2').inside {
             try {
                 // Membuat executable menggunakan PyInstaller
-                sh 'pyinstaller --onefile sources/add2vals.py'
+                sh 'pyinstaller --onefile sources/add2vals.py > build_log.txt 2>&1'
             } finally {
                 // Jika build berhasil, arsipkan hasil dari build
                 archiveArtifacts artifacts: 'dist/add2vals', allowEmptyArchive: true
