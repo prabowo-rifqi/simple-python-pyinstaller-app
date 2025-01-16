@@ -30,14 +30,23 @@ node {
     stage('Deliver') {
         // Menjalankan Docker dalam container dengan image yang diinginkan
         docker.image('cdrx/pyinstaller-linux:python2').inside {
-            // Menjalankan perintah pyinstaller untuk membangun executable
-            sh 'pyinstaller --onefile sources/add2vals.py'
-        }
-
-        // Menyimpan artefak jika build berhasil
-        post {
-            success {
-                archiveArtifacts 'dist/add2vals'
+            try {
+                // Menjalankan perintah pyinstaller untuk membangun executable
+                sh '''
+                    pyinstaller --onefile sources/add2vals.py
+                    if [ -f dist/add2vals ]; then
+                        echo "Build successful, archiving artifacts..."
+                        cp dist/add2vals ./add2vals
+                    else
+                        echo "Build failed, executable not found"
+                        exit 1
+                    fi
+                '''
+                // Archive the artifact if build was successful
+                archiveArtifacts artifacts: 'add2vals', fingerprint: true
+            } catch (e) {
+                currentBuild.result = 'FAILURE'
+                throw e
             }
         }
     }
