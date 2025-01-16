@@ -1,6 +1,5 @@
 node {
-    docker.image('python:3.9-alpine').inside {
-        // Stage 'Build'
+    docker.image('python-jenkins-dind').inside {
         stage('Build') {
             try {
                 // Menjalankan perintah py_compile untuk memeriksa syntax Python
@@ -11,12 +10,8 @@ node {
             }
         }
 
-        // Stage 'Test'
         stage('Test') {
             try {
-                // Menginstal pytest
-                sh 'pip install --user pytest'
-
                 // Menjalankan pytest dan menyimpan hasilnya dalam format XML
                 sh 'pytest --verbose --junit-xml=test-reports/results.xml sources/test_calc.py > log.txt 2>&1'
             } finally {
