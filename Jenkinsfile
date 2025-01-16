@@ -20,5 +20,14 @@ node {
                 junit 'test-reports/results.xml'
             }
         }
+        stage('Deliver') {
+                try {
+                    // Menjalankan perintah pyinstaller untuk membuat file executable
+                    sh 'pyinstaller --onefile sources/add2vals.py'
+                } finally {
+                    // Mengarsipkan hasil file executable yang dihasilkan
+                    archiveArtifacts 'dist/add2vals'
+                }
+            }
     }
 }
