@@ -28,18 +28,16 @@ node {
 
     // Stage 'Deliver'
     stage('Deliver') {
-        docker.image('python:3.8-slim').inside {
-            try {
-                // Menampilkan kontainer yang sedang berjalan
-                sh 'docker ps -a'
+        // Menjalankan Docker dalam container dengan image yang diinginkan
+        docker.image('cdrx/pyinstaller-linux:python2').inside {
+            // Menjalankan perintah pyinstaller untuk membangun executable
+            sh 'pyinstaller --onefile sources/add2vals.py'
+        }
 
-                // Cek apakah folder tersedia di dalam container
-                sh 'ls /var/jenkins_home/workspace'
-
-                // Jalankan pyinstaller
-                sh 'pyinstaller --onefile sources/add2vals.py'
-            } finally {
-                archiveArtifacts artifacts: 'dist/add2vals', allowEmptyArchive: true
+        // Menyimpan artefak jika build berhasil
+        post {
+            success {
+                archiveArtifacts 'dist/add2vals'
             }
         }
     }
