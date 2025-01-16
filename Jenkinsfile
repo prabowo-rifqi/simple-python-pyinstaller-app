@@ -32,7 +32,7 @@ node {
             sh '''
                 cd /workspace
                 mkdir -p dist
-                python -m PyInstaller --onefile sources/add2vals.py
+                python -m pyinstaller --onefile sources/add2vals.py
             '''
 
             if (fileExists('dist/add2vals')) {
