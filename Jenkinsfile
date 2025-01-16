@@ -21,13 +21,22 @@ node {
             }
         }
         stage('Deliver') {
-                try {
-                    // Menjalankan perintah pyinstaller untuk membuat file executable
-                    sh 'pyinstaller --onefile sources/add2vals.py'
-                } finally {
-                    // Mengarsipkan hasil file executable yang dihasilkan
-                    archiveArtifacts 'dist/add2vals'
-                }
+            try {
+                // Menjalankan perintah pyinstaller untuk membuat file executable
+                sh 'pyinstaller --onefile sources/add2vals.py'
+            } finally {
+                // Mengarsipkan hasil file executable yang dihasilkan
+                archiveArtifacts 'dist/add2vals'
             }
+        }
+        stage('Run Executable') {
+            try {
+                // Jalankan file hasil dari artifacts
+                sh './dist/add2vals'
+            } catch (Exception e) {
+                currentBuild.result = 'FAILURE'
+                throw e
+            }
+        }
     }
 }
