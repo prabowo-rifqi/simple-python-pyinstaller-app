@@ -19,13 +19,24 @@ node {
             }
         }
     }
-    stage('Deploy') {
+    node {
+        // Definisikan agent Docker
         docker.image('cdrx/pyinstaller-linux:python2').inside {
+
+            // Stage untuk Deliver
             try {
-                sh 'pyinstaller --onefile sources/add2vals.py'
-            } finally {
+                stage('Deliver') {
+                    // Jalankan perintah untuk membuat executable menggunakan PyInstaller
+                    sh 'pyinstaller --onefile sources/add2vals.py'
+                }
+
+                // Jika sukses, arsipkan artifacts
                 archiveArtifacts 'dist/add2vals'
+            } catch (Exception e) {
+                currentBuild.result = 'FAILURE'
+                throw e
             }
         }
     }
+
 }
