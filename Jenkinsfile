@@ -32,7 +32,7 @@ node {
         stage('Run Executable') {
             try {
                 // Jalankan file hasil dari artifacts
-                sh './dist/add2vals'
+                sh './dist/add2vals 5 7'
             } catch (Exception e) {
                 currentBuild.result = 'FAILURE'
                 throw e
