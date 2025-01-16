@@ -1,52 +1,44 @@
-node {
-    // Stage 'Build'
-    stage('Build') {
-        docker.image('python:2-alpine').inside {
-            try {
-                // Menjalankan perintah py_compile untuk memeriksa syntax Python
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py > log.txt 2>&1'
-            } finally {
-                // Mengarsipkan file log
-                archiveArtifacts artifacts: 'log.txt', allowEmptyArchive: true
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'python:2-alpine'
+                }
+            }
+            steps {
+                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
-    }
-
-    // Stage 'Test'
-    stage('Test') {
-        docker.image('qnib/pytest').inside {
-            try {
-                // Menjalankan pytest dan menyimpan hasilnya dalam format XML
-                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py > log.txt 2>&1'
-            } finally {
-                // Mengarsipkan file log dan hasil test
-                archiveArtifacts artifacts: 'log.txt', allowEmptyArchive: true
-                junit 'test-reports/results.xml'
+        stage('Test') {
+            agent {
+                docker {
+                    image 'qnib/pytest'
+                }
+            }
+            steps {
+                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
+            }
+            post {
+                always {
+                    junit 'test-reports/results.xml'
+                }
             }
         }
-    }
-
-    // Stage 'Deliver'
-    stage('Deliver') {
-        docker.image('cdrx/pyinstaller-linux:python2').inside('--entrypoint=""') {
-            sh '''
-                # Verifikasi PyInstaller terinstal
-                which pyinstaller
-                if [ $? -ne 0 ]; then
-                    echo "PyInstaller not found!"
-                    exit 1
-                fi
-
-                # Membuat executable
-                cd ${WORKSPACE}
-                mkdir -p dist
-                PyInstaller --onefile sources/add2vals.py
-            '''
-            // Mengecek apakah executable berhasil dibuat
-            if (fileExists('dist/add2vals')) {
-                archiveArtifacts artifacts: 'dist/add2vals', fingerprint: true
-            } else {
-                error 'PyInstaller gagal membuat executable'
+        stage('Deliver') {
+            agent {
+                docker {
+                    image 'cdrx/pyinstaller-linux:python2'
+                }
+            }
+            steps {
+                sh 'pyinstaller --onefile sources/add2vals.py'
+            }
+            post {
+                success {
+                    archiveArtifacts 'dist/add2vals'
+                }
             }
         }
     }
