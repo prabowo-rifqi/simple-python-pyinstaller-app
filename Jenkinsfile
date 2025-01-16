@@ -34,7 +34,7 @@ node {
                 sh 'pyinstaller --onefile sources/add2vals.py'
             } finally {
                 // Jika build berhasil, arsipkan hasil dari build
-                archiveArtifacts 'dist/add2vals'
+                archiveArtifacts artifacts: 'dist/add2vals', allowEmptyArchive: true
             }
         }
     }
