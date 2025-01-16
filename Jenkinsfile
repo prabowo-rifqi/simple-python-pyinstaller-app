@@ -28,42 +28,22 @@ node {
 
     // Stage 'Deliver'
     stage('Deliver') {
-        docker.image('python:2-alpine').inside('--entrypoint=""') {
+        docker.image('mayankfawkes/pyinstaller:latest').inside {
             sh '''
-                # Verifikasi apakah pip terinstal
-                which pip
-                if [ $? -ne 0 ]; then
-                    echo "pip not found!"
-                    exit 1
-                fi
-
-                # Install PyInstaller versi 3.6 untuk kompatibilitas dengan Python 2.7
-                pip install pyinstaller==3.6
-
-                # Verifikasi PyInstaller terinstal
+                # Verify PyInstaller is installed
                 which pyinstaller
-                if [ $? -ne 0 ]; then
-                    echo "PyInstaller not found!"
-                    exit 1
-                fi
 
-                # Membuat executable
+                # Create executable
                 cd ${WORKSPACE}
                 mkdir -p dist
-                # Menjalankan PyInstaller untuk membuat file executable
                 PyInstaller --onefile sources/add2vals.py
-
-                # Menunggu hingga PyInstaller selesai
-                wait $!
             '''
 
-            // Mengecek apakah executable berhasil dibuat
             if (fileExists('dist/add2vals')) {
                 archiveArtifacts artifacts: 'dist/add2vals', fingerprint: true
             } else {
-                error 'PyInstaller gagal membuat executable'
+                error 'PyInstaller failed to create the executable'
             }
         }
     }
-
 }
