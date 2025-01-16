@@ -28,8 +28,18 @@ node {
 
     // Stage 'Deliver'
     stage('Deliver') {
-        docker.image('cdrx/pyinstaller-linux:python2').inside('--entrypoint=""') {
+        docker.image('python:2-alpine').inside('--entrypoint=""') {
             sh '''
+                # Verifikasi apakah pip terinstal
+                which pip
+                if [ $? -ne 0 ]; then
+                    echo "pip not found!"
+                    exit 1
+                fi
+
+                # Install PyInstaller secara manual
+                pip install pyinstaller
+
                 # Verifikasi PyInstaller terinstal
                 which pyinstaller
                 if [ $? -ne 0 ]; then
@@ -40,7 +50,7 @@ node {
                 # Membuat executable
                 cd ${WORKSPACE}
                 mkdir -p dist
-                # Menjalankan PyInstaller dan menunggu proses selesai
+                # Menjalankan PyInstaller untuk membuat file executable
                 PyInstaller --onefile sources/add2vals.py
 
                 # Menunggu hingga PyInstaller selesai
