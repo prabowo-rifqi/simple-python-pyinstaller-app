@@ -37,8 +37,8 @@ node {
                     exit 1
                 fi
 
-                # Install PyInstaller secara manual
-                pip install pyinstaller
+                # Install PyInstaller versi 3.6 untuk kompatibilitas dengan Python 2.7
+                pip install pyinstaller==3.6
 
                 # Verifikasi PyInstaller terinstal
                 which pyinstaller
@@ -65,4 +65,5 @@ node {
             }
         }
     }
+
 }
