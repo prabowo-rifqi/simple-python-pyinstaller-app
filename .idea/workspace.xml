@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Add Deploy Stage" />
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Add Deploy Stage">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +76,7 @@
       <workItem from="1736948445864" duration="3045000" />
       <workItem from="1737034687682" duration="135000" />
       <workItem from="1737043601392" duration="1970000" />
-      <workItem from="1737045649102" duration="1706000" />
+      <workItem from="1737045649102" duration="2005000" />
     </task>
     <task id="LOCAL-00001" summary="Move Jenkinsfile">
       <option name="closed" value="true" />
@@ -340,7 +342,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737047276279</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737047381057</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1737047381057</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737047549312</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1737047549312</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737047644602</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1737047644602</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
