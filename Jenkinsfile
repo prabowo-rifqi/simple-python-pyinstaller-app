@@ -30,8 +30,7 @@ node {
             }
         }
         stage('Manual Approval') {
-                input message: 'Lanjutkan ke tahap Deploy?', ok: 'Proceed', cancel: 'Abort'
-            }
+            input message: 'Lanjutkan ke tahap Deploy?', ok: 'Proceed', cancel: 'Abort'
         }
         stage('Deploy') {
             try {
