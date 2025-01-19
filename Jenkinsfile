@@ -18,7 +18,7 @@ node {
                 junit 'test-reports/results.xml'
             }
         }
-        stage('Deliver') {
+        stage('Create Executable') {
             try {
                 sh 'pyinstaller --onefile sources/add2vals.py > log.txt 2>&1'
             } finally {
