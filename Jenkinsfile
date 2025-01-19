@@ -1,5 +1,5 @@
 node {
-    docker.image('python-dind').inside('--network host --privileged') {
+    docker.image('python-dd').inside('--privileged --user root') {
         stage('Build') {
             try {
                 // Menjalankan perintah py_compile untuk memeriksa syntax Python
