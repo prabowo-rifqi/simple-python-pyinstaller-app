@@ -40,6 +40,7 @@ node {
                     sh 'mkdir -p ~/.ssh && ssh-keyscan -H 54.169.12.75 >> ~/.ssh/known_hosts'
                     sh 'scp -i $AWS_SSH_KEY -r ./dist/* $SSH_USER@54.169.12.75:/home/ubuntu/my-python-app/ >> log.txt 2>&1'
                     echo "Aplikasi berhasil dideploy di server AWS."
+                    sleep time: 1, unit: 'MINUTES'
                 }
             } catch (Exception e) {
                 currentBuild.result = 'FAILURE'
