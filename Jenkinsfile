@@ -23,7 +23,7 @@ node {
         stage('Deliver') {
             try {
                 // Menjalankan perintah pyinstaller untuk membuat file executable
-                sh 'pyinstaller --onefile sources/add2vals.py'
+                sh 'pyinstaller --onefile --no-upx sources/add2vals.py'
             } finally {
                 // Mengarsipkan hasil file executable yang dihasilkan
                 archiveArtifacts 'dist/add2vals'
