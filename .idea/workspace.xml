@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update Deploy Stage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update pipeline logging to log.txt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,15 +76,7 @@
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
       <workItem from="1737048776580" duration="783000" />
-      <workItem from="1737279390752" duration="8389000" />
-    </task>
-    <task id="LOCAL-00012" summary="Update Jenkinsfile">
-      <option name="closed" value="true" />
-      <created>1736939659654</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1736939659654</updated>
+      <workItem from="1737279390752" duration="8693000" />
     </task>
     <task id="LOCAL-00013" summary="Update Jenkinsfile">
       <option name="closed" value="true" />
@@ -473,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737288971397</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Update pipeline logging to log.txt">
+      <option name="closed" value="true" />
+      <created>1737292412324</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1737292412324</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +484,7 @@
     <MESSAGE value="Update Jenkinsfile" />
     <MESSAGE value="Add Deploy Stage" />
     <MESSAGE value="Update Deploy Stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Deploy Stage" />
+    <MESSAGE value="Update pipeline logging to log.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update pipeline logging to log.txt" />
   </component>
 </project>
