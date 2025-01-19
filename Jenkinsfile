@@ -19,7 +19,7 @@ node {
             }
         }
 
-        stage('Deliver') {
+        stage('Create Execute File') {
             try {
                 sh 'echo "=== Deliver Stage ===" >> log.txt'
                 sh 'pyinstaller --onefile sources/add2vals.py >> log.txt 2>&1'
