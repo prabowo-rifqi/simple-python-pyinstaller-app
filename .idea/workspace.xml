@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update Deploy Stage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update Deploy Stage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +76,7 @@
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
       <workItem from="1737048776580" duration="783000" />
-      <workItem from="1737279390752" duration="2206000" />
+      <workItem from="1737279390752" duration="2612000" />
     </task>
     <task id="LOCAL-00001" summary="Move Jenkinsfile">
       <option name="closed" value="true" />
@@ -448,7 +446,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737283866838</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Update Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737284950174</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1737284950174</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Update Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737285034459</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1737285034459</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
