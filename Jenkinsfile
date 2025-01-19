@@ -1,7 +1,4 @@
 node {
-    environment {
-        DOCKER_HOST = "tcp://jenkins-docker:2376"
-    }
     docker.image('python-jenkins-dind').inside('--network host --privileged') {
         stage('Build') {
             try {
