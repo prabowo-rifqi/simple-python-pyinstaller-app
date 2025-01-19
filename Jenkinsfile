@@ -40,7 +40,7 @@ node {
 
                     // SSH ke server AWS dan pindahkan hasil build ke folder yang tepat
                     sh 'ssh -i $AWS_SSH_KEY $SSH_USER@54.169.12.75 << EOF\n' +
-                       './dist/add2vals 5 7' +
+                       './home/ubuntu/my-python-app/add2vals 5 7' +
                        'EOF'
 
                     echo "Aplikasi berhasil dideploy di server AWS."
