@@ -55,4 +55,10 @@ node {
                     echo "Deployment completed successfully. Logs are stored in log.txt."
                 }
             } catch (Exception e) {
-                echo "Deployment failed. See log.txt for d
+                echo "Deployment failed. See log.txt for details."
+                currentBuild.result = 'FAILURE'
+                throw e
+            }
+        }
+    }
+}
