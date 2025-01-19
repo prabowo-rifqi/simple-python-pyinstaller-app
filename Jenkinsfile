@@ -1,5 +1,8 @@
 node {
     docker.image('python-jenkins-dind').inside {
+        stage('Checkout') {
+            checkout scm
+        }
         stage('Build') {
             try {
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py > log.txt 2>&1'
