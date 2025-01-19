@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update pipeline logging to log.txt" />
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Update pipeline logging to log.txt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,23 +78,7 @@
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
       <workItem from="1737048776580" duration="783000" />
-      <workItem from="1737279390752" duration="9346000" />
-    </task>
-    <task id="LOCAL-00023" summary="Add Deploy Stage">
-      <option name="closed" value="true" />
-      <created>1737045261465</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1737045261465</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Add Deploy Stage">
-      <option name="closed" value="true" />
-      <created>1737045543806</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1737045543806</updated>
+      <workItem from="1737279390752" duration="10133000" />
     </task>
     <task id="LOCAL-00025" summary="Add Deploy Stage">
       <option name="closed" value="true" />
@@ -470,7 +456,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737293197928</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Update pipeline logging to log.txt">
+      <option name="closed" value="true" />
+      <created>1737293260505</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1737293260505</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update pipeline logging to log.txt">
+      <option name="closed" value="true" />
+      <created>1737293337291</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1737293337291</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
