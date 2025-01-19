@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Add Deploy Stage" />
+    <list default="true" id="42bc2126-d60d-4dff-97a7-d2d8186d7ed4" name="Changes" comment="Add Deploy Stage">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +40,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rifqi/project/simple-python-pyinstaller-app",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/rifqi/project/python/Dockerfile",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +78,8 @@
       <workItem from="1737034687682" duration="135000" />
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
-      <workItem from="1737048776580" duration="343000" />
+      <workItem from="1737048776580" duration="783000" />
+      <workItem from="1737279390752" duration="1136000" />
     </task>
     <task id="LOCAL-00001" summary="Move Jenkinsfile">
       <option name="closed" value="true" />
@@ -413,7 +417,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737049009613</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737049203756</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1737049203756</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Add Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737049291180</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1737049291180</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
