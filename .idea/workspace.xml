@@ -76,15 +76,7 @@
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
       <workItem from="1737048776580" duration="783000" />
-      <workItem from="1737279390752" duration="5659000" />
-    </task>
-    <task id="LOCAL-00008" summary="Update Jenkinsfile">
-      <option name="closed" value="true" />
-      <created>1736938283246</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1736938283246</updated>
+      <workItem from="1737279390752" duration="5957000" />
     </task>
     <task id="LOCAL-00009" summary="Update Jenkinsfile">
       <option name="closed" value="true" />
@@ -470,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737288254048</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Update Deploy Stage">
+      <option name="closed" value="true" />
+      <created>1737288316145</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1737288316145</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
