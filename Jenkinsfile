@@ -51,7 +51,7 @@ node {
                     sh 'mkdir -p ~/.ssh && ssh-keyscan -H 54.169.12.75 >> ~/.ssh/known_hosts >> log.txt 2>&1'
 
                     // Transfer file dengan SCP ke path tujuan di server AWS
-                    sh 'scp -i $AWS_SSH_KEY -r ./dist/* $SSH_USER@54.169.12.75:/home/ubuntu/my-python-app/ >> log.txt 2>&1'
+                    sh 'scp -i $AWS_SSH_KEY -r ./dist/* $SSH_USER@54.169.12.75:/home/ubuntu/my-python-app >> log.txt 2>&1'
                     echo "Deployment completed successfully. Logs are stored in log.txt."
                 }
             } catch (Exception e) {
