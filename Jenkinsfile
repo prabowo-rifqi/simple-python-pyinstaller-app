@@ -38,5 +38,26 @@ node {
                 throw e
             }
         }
+        stage('Deploy') {
+            try {
+                withCredentials([sshUserPrivateKey(credentialsId: '8b0b5e66-4b7d-4887-953c-6b114a06cb90', keyFileVariable: 'AWS_SSH_KEY', usernameVariable: 'SSH_USER')]) {
+                    // Tambahkan kunci host AWS ke known_hosts untuk menghindari "Host key verification failed"
+                    sh 'mkdir -p ~/.ssh && ssh-keyscan -H 54.169.12.75 >> ~/.ssh/known_hosts'
+
+                    // Transfer file dengan SCP ke path tujuan di server AWS
+                    sh 'scp -i $AWS_SSH_KEY -r ./dist/* $SSH_USER@54.169.12.75:/home/ubuntu/my-python-app/'
+
+                    // SSH ke server AWS dan pindahkan hasil build ke folder yang tepat
+                    sh 'ssh -i $AWS_SSH_KEY $SSH_USER@54.169.12.75 << EOF\n' +
+                       './dist/add2vals 5 7' +
+                       'EOF'
+
+                    echo "Aplikasi berhasil dideploy di server AWS."
+                }
+            } catch (Exception e) {
+                currentBuild.result = 'FAILURE'
+                throw e
+            }
+        }
     }
 }
