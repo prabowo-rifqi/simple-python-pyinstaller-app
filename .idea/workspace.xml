@@ -76,23 +76,7 @@
       <workItem from="1737043601392" duration="1970000" />
       <workItem from="1737045649102" duration="2767000" />
       <workItem from="1737048776580" duration="783000" />
-      <workItem from="1737279390752" duration="10462000" />
-    </task>
-    <task id="LOCAL-00026" summary="Add Deploy Stage">
-      <option name="closed" value="true" />
-      <created>1737046353951</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1737046353951</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add Deploy Stage">
-      <option name="closed" value="true" />
-      <created>1737046400441</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1737046400441</updated>
+      <workItem from="1737279390752" duration="11104000" />
     </task>
     <task id="LOCAL-00028" summary="Add Deploy Stage">
       <option name="closed" value="true" />
@@ -470,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737301953441</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Update pipeline logging to log.txt">
+      <option name="closed" value="true" />
+      <created>1737302168240</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1737302168240</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Update pipeline logging to log.txt">
+      <option name="closed" value="true" />
+      <created>1737302205201</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1737302205201</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
